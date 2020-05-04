@@ -14,7 +14,7 @@ def calEntropy(domain):
     shannon = 0
     for i in tmp_dict.keys():
     	p = float(tmp_dict[i]) / domain_len
-    	shannon = shannon - p * np.log(p,2)
+    	shannon = shannon - p * np.math.log(p,2)
     return shannon
 
 def calNumratio(domain):
@@ -56,7 +56,7 @@ def initTest(filename):
 		for line in f:
 			if line.startswith("#") or line =="":
 				continue
-			testlist.append(line)
+			testlist.append(line.strip())
 
 def main():
 	initData(r"train.txt")
